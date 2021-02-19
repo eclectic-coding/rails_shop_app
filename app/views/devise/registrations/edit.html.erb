@@ -27,6 +27,19 @@
         <p class="form-text text-muted"><small>We need your current password to confirm your changes</small></p>
       </div>
 
+      <div class="row mb-4">
+        <div class="col-sm-3">
+          <%= image_tag avatar_url_for(current_user, size: 80), class: "rounded-circle" %>
+        </div>
+
+        <div class="col-sm-8">
+          <div class="form-group ">
+            <%= f.label "Edit your Avatar", class: "mb-2" %>
+            <%= f.file_field :avatar %>
+          </div>
+        </div>
+      </div>
+
       <div class="mb-3 d-grid">
         <%= f.submit "Save Changes", class: 'btn btn-lg btn-primary' %>
       </div>
