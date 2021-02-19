@@ -3,7 +3,7 @@
     <h1 class="text-center">Sign Up</h1>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= render partial: 'devise/shared/error_messages', resource: resource %>
+      <%= render partial: "shared/form_errors", locals: { f: f }, resource: resource %>
 
       <div class="mb-3">
         <%= f.text_field :name, autofocus: false, class: 'form-control', placeholder: "Name" %>
