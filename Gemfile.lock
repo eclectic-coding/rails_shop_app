@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/king601/devise-bootstrapped.git
+  revision: 464479797a3fc0ec11e9090b7dc62cc5db955f7d
+  branch: bootstrap5
+  specs:
+    devise-bootstrapped (0.2.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -92,6 +99,8 @@ GEM
     erubi (1.10.0)
     ffi (1.14.2)
     formatador (0.2.5)
+    friendly_id (5.4.2)
+      activerecord (>= 4.0.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     guard (2.16.2)
@@ -132,6 +141,8 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     msgpack (1.4.2)
+    name_of_person (1.1.1)
+      activesupport (>= 5.2.0)
     nenv (0.3.0)
     nio4r (2.5.5)
     nokogiri (1.11.1-x86_64-linux)
@@ -276,12 +287,15 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise
+  devise-bootstrapped!
+  friendly_id
   guard
   guard-minitest
   jbuilder (~> 2.7)
   listen (~> 3.3)
   minitest
   minitest-reporters
+  name_of_person
   pg (~> 1.1)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
