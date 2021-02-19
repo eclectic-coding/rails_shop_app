@@ -1,2 +1,16 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="d-flex align-items-center justify-content-center mt-5">
+  <div class="media mr-5 align-self-start">
+    <%= image_tag avatar_url_for(current_user, size: 128), class: "rounded-circle mr-4" %>
+  </div>
+  <div class="media">
+    <div class="media-body">
+      <div class="d-flex flex-row align-items-center justify-content-between">
+        <h1><%= current_user.name %></h1>
+        <%= link_to "Edit", edit_user_registration_path, class: "ml-3 btn btn-secondary btn-sm" if current_user.id == @user.id %>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
