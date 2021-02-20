@@ -8,5 +8,8 @@ description
 Project ToDo Notes
 
 ## Products
-- Only admin can create and delete products
-- Create alphanumeric stock id number when admin creates
+- [X] Product images as responsive and square
+- [X] Product Card title as one line
+- [ ] Add breadcrumbs
+- [ ] Only admin can create and delete products
+- [ ] Create alphanumeric stock id number when admin creates
