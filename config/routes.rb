@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show], param: :slug, path: "/user"
 
-  root to: 'static#home'
+  resources :products, only: %i[index show]
+
+  root 'products#index'
 end
