@@ -1,0 +1,20 @@
+<div class="col-md-4 col-sm-6 col-xs-12">
+  <div class="card-deck">
+    <div class="card my-4 shadow">
+      <%= link_to product_path(product.id), "aria-label": "Read more about #{product.title}" do %>
+        <div class="img-fluid product-image">
+          <%= image_tag product.image, class: "card-img-top p-1", alt: "#{product.title} product Image" %>
+        </div>
+      <% end %>
+      <div class="card-body">
+        <p class="card-title fs-5 text-nowrap overflow-hidden text-truncate "><%= product.title %></p>
+        <span class="badge rounded-pill bg-warning text-capitalize text-dark"><%= product.category %></span>
+        <p class="card-text"><%= product.description.truncate(150) %></p>
+        <div class="py-1 d-flex justify-content-between align-content-center">
+          <strong class="align-self-center"><%= number_to_currency(product.price) %></strong>
+          <button class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

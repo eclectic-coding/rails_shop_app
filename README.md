@@ -1,24 +1,15 @@
-# README
+# Rails Shop App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Travis (.com)](https://img.shields.io/travis/com/eclectic-coding/rails_shop_app)
+![GitHub](https://img.shields.io/github/license/eclectic-coding/rails_shop_app)  
 
-Things you may want to cover:
+description
 
-* Ruby version
+Project ToDo Notes
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Products
+- [X] Product images as responsive and square
+- [X] Product Card title as one line
+- [ ] Add breadcrumbs
+- [ ] Only admin can create and delete products
+- [ ] Create [alphanumeric](http://caseyscarborough.com/blog/2013/07/23/generating-alphanumeric-strings-in-ruby/) stock id number when admin creates

@@ -1,4 +1,11 @@
 @import "~bootstrap";
-h1 {
-  color: orangered;
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+
+  img {
+    position: absolute;
+  }
 }
