@@ -12,4 +12,4 @@ Project ToDo Notes
 - [X] Product Card title as one line
 - [ ] Add breadcrumbs
 - [ ] Only admin can create and delete products
-- [ ] Create alphanumeric stock id number when admin creates
+- [ ] Create [alphanumeric](http://caseyscarborough.com/blog/2013/07/23/generating-alphanumeric-strings-in-ruby/) stock id number when admin creates
