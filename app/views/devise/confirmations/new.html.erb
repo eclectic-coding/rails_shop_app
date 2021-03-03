@@ -2,34 +2,21 @@
   <div class="col-sm-4 ml-auto mr-auto">
     <h2 class="text-center">Resend confirmation instructions</h2>
 
-# frozen_string_literal: true
-form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post })
- do |f| %>
-# frozen_string_literal: true
-render partial: "shared/form_errors", locals: { f: f }, resource: resource
- %>
+    <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+      <%= render partial: "shared/form_errors", locals: { f: f }, resource: resource %>
 
       <div class="mb-3">
-# frozen_string_literal: true
-f.label :email, class: "form-label"
- %><br>
-# frozen_string_literal: true
-f.email_field :email, autofocus: true, class: "form-control",
-value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email)
- %>
+        <%= f.label :email, class: 'form-label' %><br />
+        <%= f.email_field :email, autofocus: true, class: 'form-control', value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
       </div>
 
       <div class="actions d-grid">
-# frozen_string_literal: true
-f.submit "Resend confirmation instructions", class: "btn btn-primary btn-lg"
- %>
+        <%= f.submit "Resend confirmation instructions", class: 'btn btn-primary btn-lg' %>
       </div>
     <% end %>
 
     <div class="text-center">
-# frozen_string_literal: true
-render "devise/shared/links"
- %>
+      <%= render "devise/shared/links" %>
     </div>
 
   </div>

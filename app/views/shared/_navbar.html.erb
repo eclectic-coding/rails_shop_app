@@ -1,8 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
   <div class="container-fluid">
-# frozen_string_literal: true
-link_to "Rails Shop", root_path, class: "navbar-brand"
- %>
+    <%= link_to "Rails Shop", root_path, class: "navbar-brand" %>
     <button
         class="navbar-toggler"
         type="button"
@@ -10,55 +8,31 @@ link_to "Rails Shop", root_path, class: "navbar-brand"
         data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent"
         aria-expanded="false"
-        aria-label="Toggle navigation">
+        aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
       <ul class="navbar-nav">
-# frozen_string_literal: true
-link_to "About", root_path, class: "nav-link", "aria-current": "page"
- %></li>
-# frozen_string_literal: true
-link_to "Contact", root_path, class: "nav-link", "aria-current": "page"
- %></li>
-# frozen_string_literal: true
-link_to "Categories ", root_path, class: "nav-link", "aria-current": "page"
- %></li>
-# frozen_string_literal: true
-link_to "Searchbar ", root_path, class: "nav-link", "aria-current": "page"
- %></li>
+        <li class="nav-item"><%= link_to "About", root_path, class: "nav-link", "aria-current": "page" %></li>
+        <li class="nav-item"><%= link_to "Contact", root_path, class: "nav-link", "aria-current": "page" %></li>
+        <li class="nav-item"><%= link_to "Categories ", root_path, class: "nav-link", "aria-current": "page" %></li>
+        <li class="nav-item"><%= link_to "Searchbar ", root_path, class: "nav-link", "aria-current": "page" %></li>
       </ul>
       <ul class="navbar-nav justify-content-end">
         <% if user_signed_in? %>
           <li class="nav-item">
-# frozen_string_literal: true
-link_to user_path(current_user.slug), class: "nav-link", "aria-current": "page"
- do %>
-# frozen_string_literal: true
-image_tag avatar_url_for(current_user, size: 40), height: 20, width: 20, class: "rounded mr-3"
- %>
-# frozen_string_literal: true
-current_user.name.first
- %>
+            <%= link_to user_path(current_user.slug), class: "nav-link", "aria-current": "page" do %>
+              <%= image_tag avatar_url_for(current_user, size: 40), height: 20, width: 20, class: "rounded mr-3" %>
+              <%= current_user.name.first %>
             <% end %>
           </li>
           Avatar
-# frozen_string_literal: true
-link_to "Profile", user_path(current_user.slug), class: "nav-link",
-"aria-current": "page"
- %></li>
-# frozen_string_literal: true
-link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link",
-"aria-current": "page"
- %></li>
+          <li class="nav-item"><%= link_to "Profile", user_path(current_user.slug), class: "nav-link", "aria-current": "page" %></li>
+          <li class="nav-item"><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link", "aria-current": "page" %></li>
         <% else %>
-# frozen_string_literal: true
-link_to "Log in", new_user_session_path, class: "nav-link", "aria-current": "page"
- %></li>
-# frozen_string_literal: true
-link_to "Sign Up", new_user_registration_path, class: "nav-link",
-"aria-current": "page"
- %></li>
+          <li class="nav-item"><%= link_to "Log in", new_user_session_path, class: "nav-link", "aria-current": "page" %></li>
+          <li class="nav-item"><%= link_to "Sign Up", new_user_registration_path, class: "nav-link", "aria-current": "page" %></li>
         <% end %>
       </ul>
 

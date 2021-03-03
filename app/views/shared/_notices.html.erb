@@ -1,14 +1,8 @@
-# frozen_string_literal: true
-flash.each
- do |msg_type, message| %>
-# frozen_string_literal: true
-bootstrap_class_for(msg_type)
- %> alert-dismissible fade show" role="alert">
+<% flash.each do |msg_type, message| %>
+  <div class="alert <%= bootstrap_class_for(msg_type) %> alert-dismissible fade show" role="alert">
     <div class="container">
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-# frozen_string_literal: true
-message
- %>
+      <%= message %>
     </div>
   </div>
 <% end %>

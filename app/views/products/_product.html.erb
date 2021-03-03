@@ -1,29 +1,17 @@
 <div class="col-md-4 col-sm-6 col-xs-12">
   <div class="card-deck">
     <div class="card my-4 shadow">
-# frozen_string_literal: true
-link_to product_path(product.id), "aria-label": "Read more about #{product.title}"
- do %>
+      <%= link_to product_path(product.id), "aria-label": "Read more about #{product.title}" do %>
         <div class="img-fluid product-image">
-# frozen_string_literal: true
-image_tag product.image, class: "card-img-top p-1", alt: "#{product.title} product Image"
- %>
+          <%= image_tag product.image, class: "card-img-top p-1", alt: "#{product.title} product Image" %>
         </div>
       <% end %>
       <div class="card-body">
-# frozen_string_literal: true
-product.title
- %></p>
-# frozen_string_literal: true
-product.category
- %></span>
-# frozen_string_literal: true
-product.description.truncate(150)
- %></p>
+        <p class="card-title fs-5 text-nowrap overflow-hidden text-truncate "><%= product.title %></p>
+        <span class="badge rounded-pill bg-warning text-capitalize text-dark"><%= product.category %></span>
+        <p class="card-text"><%= product.description.truncate(150) %></p>
         <div class="py-1 d-flex justify-content-between align-content-center">
-# frozen_string_literal: true
-number_to_currency(product.price)
- %></strong>
+          <strong class="align-self-center"><%= number_to_currency(product.price) %></strong>
           <button class="btn btn-primary">Add to Cart</button>
         </div>
       </div>

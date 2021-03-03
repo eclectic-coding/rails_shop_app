@@ -1,28 +1,16 @@
 <h2>Resend unlock instructions</h2>
 
-# frozen_string_literal: true
-form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post })
- do |f| %>
-# frozen_string_literal: true
-render partial: "shared/form_errors", locals: { f: f }, resource: resource
- %>
+<%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+  <%= render partial: "shared/form_errors", locals: { f: f }, resource: resource %>
 
   <div class="field">
-# frozen_string_literal: true
-f.label :email, class: "form-label"
- %><br>
-# frozen_string_literal: true
-f.email_field :email, autofocus: true
- %>
+    <%= f.label :email, class: 'form-label' %><br />
+    <%= f.email_field :email, autofocus: true %>
   </div>
 
   <div class="actions">
-# frozen_string_literal: true
-f.submit "Resend unlock instructions"
- %>
+    <%= f.submit "Resend unlock instructions" %>
   </div>
 <% end %>
 
-# frozen_string_literal: true
-render "devise/shared/links"
- %>
+<%= render "devise/shared/links" %>
