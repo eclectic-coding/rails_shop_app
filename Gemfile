@@ -16,6 +16,7 @@ gem "name_of_person"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem "rails", "~> 6.1.3"
+gem "rexml"
 gem "sass-rails", ">= 6"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 5.0"
@@ -42,7 +43,7 @@ group :test do
   gem "guard-minitest"
   gem "minitest"
   gem "minitest-reporters"
-  gem "selenium-webdriver", "~> 4.0.0.beta1"
+  gem "selenium-webdriver"
   gem "webdrivers"
 end
 
