@@ -1,6 +1,19 @@
 {
   "name": "rails-shop-app",
   "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "Gemfile": [
+      "bundle exec rubocop --auto-correct"
+    ],
+    "app/**/*.html.erb": [
+      "bundle exec erblint --autocorrect"
+    ]
+  },
   "dependencies": {
     "@popperjs/core": "^2.8.3",
     "@rails/actioncable": "^6.1.3",
@@ -13,6 +26,8 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "husky": "^5.1.3",
+    "lint-staged": "^10.5.4",
     "webpack-dev-server": "^3.11.2"
   }
 }

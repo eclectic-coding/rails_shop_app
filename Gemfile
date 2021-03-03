@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
 
 ruby "3.0.0"
@@ -24,6 +26,7 @@ end
 
 group :development do
   gem "awesome_print"
+  gem "erb_lint", require: false
   gem "listen", "~> 3.3"
   gem "rack-mini-profiler", "~> 2.0"
   gem "rubocop"
