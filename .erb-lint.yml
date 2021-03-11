@@ -1,4 +1,6 @@
 EnableDefaultLinters: true
+exclude:
+  - '**/views/devise/**/*'
 linters:
   ErbSafety:
     enabled: true
