@@ -9,6 +9,9 @@
   "lint-staged": {
     "app/**/*.html.erb": [
       "bundle exec erblint --lint-all --autocorrect"
+    ],
+    "app/**/*": [
+      "bundle exec standardrb"
     ]
   },
   "scripts": {},

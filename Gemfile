@@ -20,6 +20,7 @@ gem "webpacker", "~> 5.0"
 
 group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
+  gem "standard"
 end
 
 group :development do
@@ -27,9 +28,6 @@ group :development do
   gem "erb_lint", require: false
   gem "listen", "~> 3.3"
   gem "rack-mini-profiler", "~> 2.0"
-  gem "rubocop"
-  gem "rubocop-minitest"
-  gem "rubocop-rails"
   gem "spring"
   gem "web-console", ">= 4.1.0"
 end
