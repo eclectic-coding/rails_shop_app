@@ -1,7 +1,6 @@
 require "test_helper"
 
 class ProductTest < ActiveSupport::TestCase
-
   def setup
     @product = products(:product_one)
   end

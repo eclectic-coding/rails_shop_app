@@ -1,5 +1,4 @@
 module ApplicationHelper
-
   def avatar_url_for(user, opts = {})
     size = opts[:size] || 32
 
@@ -21,5 +20,4 @@ module ApplicationHelper
       notice: "alert-info"
     }.stringify_keys[flash_type.to_s] || flash_type.to_s
   end
-
 end
