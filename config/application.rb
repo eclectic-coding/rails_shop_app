@@ -12,7 +12,7 @@ module RailsYourCongress
     config.load_defaults 6.1
 
     config.generators do |g|
-      # g.stylesheets false
+      g.stylesheets false
       g.helper nil
       # g.test_framework nil
     end
