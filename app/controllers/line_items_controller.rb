@@ -7,13 +7,15 @@ class LineItemsController < ApplicationController
     @line_items = LineItem.all
   end
 
-  def show; end
+  def show
+  end
 
   def new
     @line_item = LineItem.new
   end
 
-  def edit; end
+  def edit
+  end
 
   def create
     product = Product.find(params[:product_id])
