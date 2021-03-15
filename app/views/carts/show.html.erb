@@ -1,4 +1,39 @@
-<p id="notice"><%= notice %></p>
+<div class="d-flex justify-content-end mt-3">
+  <%= link_to "Keep Shopping", products_path, class: "btn btn-warning" %>
+</div>
 
-<%= link_to 'Edit', edit_cart_path(@cart) %> |
-<%= link_to 'Back', carts_path %>
+<section>
+  <div class="pt-3">
+    <h5 class="mb-3">Shopping Cart</h5>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Quantity</th>
+        <th scope="col">Product</th>
+        <th scope="col">Title</th>
+        <th scope="col">Price</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render(@cart.line_items) %>
+    </tbody>
+  </table>
+
+  <div class="d-flex justify-content-between">
+    <div>
+      <%= button_to 'Empty Cart', @cart, method: :delete, data: { confirm: "Are you sure? " }, class: "btn btn-danger" %>
+    </div>
+    <div>
+      <h4>
+        <span>Total: </span><%= number_to_currency(@cart.total_price) %>
+      </h4>
+    </div>
+  </div>
+</section>
+
+<div class="mt-5">
+  <%= link_to 'Edit', edit_cart_path(@cart) %> |
+  <%= link_to 'Back', carts_path %>
+</div>

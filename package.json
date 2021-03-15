@@ -7,7 +7,7 @@
     }
   },
   "lint-staged": {
-    "app/**/*.html.erb": [
+    "app/views/**/*.html.erb": [
       "bundle exec erblint --lint-all --autocorrect"
     ],
     "app/**/*": [

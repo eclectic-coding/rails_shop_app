@@ -12,4 +12,3 @@ ignore:                 # default: []
   - 'vendor/**/*'
   - 'test/fixtures/*.yml'
   - 'Guardfile'
-  - 'app/assets/**/*'
