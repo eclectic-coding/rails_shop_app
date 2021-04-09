@@ -21,8 +21,6 @@ gem "webpacker", "~> 5.0"
 group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   gem "standard"
-  gem "rubocop"
-  gem "rubocop-rails"
 end
 
 group :development do
