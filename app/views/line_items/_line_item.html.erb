@@ -1,11 +1,23 @@
 <tr>
-  <td><%= line_item.quantity %></td>
   <td>
+    <%= form_with model: line_item do |f| %>
+      <%= f.number_field :quantity, class: "form-control", style: "width: 75px" %>
+      <%= f.submit "Update", method: :patch %>
+    <% end %>
+  </td>
+  <td>
+    <span>
+      <%= link_to product_path(line_item.product) do %>
+        <%= truncate(line_item.product.title, length: 20) %>
+      <% end %>
+    </span>
     <figure class="product-image__cart">
       <%= image_tag(line_item.product.image) %>
     </figure>
   </td>
-  <td><%= line_item.product.title %></td>
+  <td><%= number_to_currency(line_item.product.price) %></td>
+  <td><%= number_to_currency(0) %></td>
   <td><%= number_to_currency(line_item.total_price) %></td>
   <td><%= link_to 'Remove Item', line_item, method: :delete, data: { confirm: "Are you sure? " }, class: "btn btn-sm btn-outline-danger" %></td>
+  <td><%= link_to 'Remove Item', "#", method: :delete, data: { confirm: "Are you sure? " }, class: "btn btn-sm btn-success" %></td>
 </tr>
