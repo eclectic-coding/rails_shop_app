@@ -12,3 +12,4 @@ ignore:                 # default: []
   - 'vendor/**/*'
   - 'test/fixtures/*.yml'
   - 'Guardfile'
+  - 'Gemfile'
