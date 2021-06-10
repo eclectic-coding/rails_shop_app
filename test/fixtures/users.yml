@@ -1,7 +1,0 @@
-confirmed_user:
-  first_name: John
-  last_name: Doe
-  email: confirmed_user@example.com
-  confirmed_at: <%= Time.zone.now %>
-  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
-  slug: "john-doe"

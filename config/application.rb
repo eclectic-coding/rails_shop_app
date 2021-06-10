@@ -13,8 +13,7 @@ module RailsYourCongress
 
     config.generators do |g|
       g.stylesheets false
-      g.helper nil
-      # g.test_framework nil
+      g.helper = false
     end
 
     # Settings in config/environments/* take precedence over those specified here.

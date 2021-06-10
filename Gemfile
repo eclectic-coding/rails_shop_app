@@ -23,7 +23,9 @@ gem "webpacker", "~> 5.0"
 
 group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
-  gem "standard"
+  gem "standard", require: false
+  gem "rspec-rails", "~> 5.0", ">= 5.0.1"
+  gem "factory_bot_rails"
 end
 
 group :development do
@@ -34,6 +36,10 @@ group :development do
   gem "spring"
   gem "web-console", ">= 4.1.0"
   # ===== App specific gems ================
+  gem "fuubar"
+  gem "guard"
+  gem "guard-rspec"
+  gem "guard-livereload", "~> 2.5", require: false
   gem "rubocop"
   gem "rubocop-rails", require: false
   gem "rubocop-rspec"
@@ -41,12 +47,9 @@ end
 
 group :test do
   gem "capybara", ">= 3.26"
-  gem "guard"
-  gem "guard-minitest"
-  gem "minitest"
-  gem "minitest-reporters"
   gem "selenium-webdriver", "~> 4.0.0.beta1"
   gem "webdrivers"
+  gem "simplecov", require: false
 end
 
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
