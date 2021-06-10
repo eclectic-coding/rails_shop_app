@@ -2,10 +2,10 @@
 guard :minitest do
   # with Minitest::Unit
   # Run everything within 'test' if the test helper changes
-  watch(%r{^test/test_helper\.rb$}) { 'test' }
+  watch(%r{^test/test_helper\.rb$}) { "test" }
 
   # Run everything within 'test/system' if ApplicationSystemTestCase changes
-  watch(%r{^test/application_system_test_case\.rb$}) { 'test/system' }
+  watch(%r{^test/application_system_test_case\.rb$}) { "test/system" }
 
   # Run the corresponding test anytime something within 'app' changes
   # e.g. 'app/models/example.rb' => 'test/models/example_test.rb'
@@ -17,7 +17,7 @@ guard :minitest do
   # Run everything in or below 'test/controllers' everytime
   # ApplicationController changes
   watch(%r{^app/controllers/application_controller\.rb$}) do
-    'test/controllers'
+    "test/controllers"
   end
 
   # Run integration test every time a corresponding controller changes
