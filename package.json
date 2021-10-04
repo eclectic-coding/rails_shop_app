@@ -27,7 +27,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "lint-staged": "^11.1.2",
+    "lint-staged": "^11.2.0",
     "webpack-dev-server": "^4.3.0",
     "husky": "^7.0.2"
   }
